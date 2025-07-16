@@ -1,0 +1,115 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: linear-gradient(180deg, #76b1e0, #2fcfcf);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Logo Section */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+}
+
+.nav-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-logo p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0e0e0e;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a.active {
+  font-weight: bold;
+  color: #083d77;
+}
+
+.nav-menu li a:hover {
+  color: #083d77;
+}
+
+/* Icons Section */
+.nav-icons {
+  display: flex;
+  gap: 12px;
+  font-size: 18px;
+  align-items: center;
+}
+
+.nav-icons a {
+  color: #ffffff;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-icons a.active svg {
+  color: #222;
+}
+
+.nav-icons a:hover {
+  color: #000;
+}
+
+/* Badge for cart, wishlist, orders */
+.icon-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: rgb(233, 3, 3);
+  color: white;
+  font-size: 11px;
+  padding: 1px 5px;
+  border-radius: 50%;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Ensure container for badge is relative */
+.nav-icons-cart,
+.nav-icons-wishlist {
+  position: relative;
+}
+
+/* Login/Logout Button */
+.nav-login-btn .login-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #2f3842;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-login-btn .login-btn:hover {
+  background-color: #1c2d4a;
+}

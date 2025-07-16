@@ -1,0 +1,17 @@
+footer {
+  position:relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #0f2027, #2c5364); /* Fixed typo and added colors */
+  padding: 10px 0;
+  z-index: 1;
+}
+
+footer h1 {
+  text-align: center;
+  margin: 0;
+  color: aliceblue;
+  font-size: 1.1rem;
+  font-weight: normal;
+}

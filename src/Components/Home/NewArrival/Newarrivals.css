@@ -1,0 +1,29 @@
+.newarrivals {
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 90px;
+  background: linear-gradient(180deg, #fcf700 0%, #eeec76 100%);
+}
+
+.newarrivals h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.newarrivals hr {
+  width: 80px;
+  height: 3px;
+  background-color: #143f3f;
+  border: none;
+  margin: 10px auto 30px;
+}
+
+.new-item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  justify-items: center;
+}

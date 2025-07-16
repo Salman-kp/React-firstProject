@@ -1,0 +1,3 @@
+.order-summary {max-width:800px;margin:40px auto;padding:20px}
+.order-item{display:flex;gap:16px;border-bottom:1px solid #ddd;padding:12px 0}
+.order-item img{width:80px;height:80px;object-fit:contain;border-radius:6px}

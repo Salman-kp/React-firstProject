@@ -1,0 +1,304 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "salmankp",
+      "email": "salmankp7592@gmail.com",
+      "password": "salmankp7592"
+    }
+  ],
+  "all_products": [
+    {
+      "id": "1",
+      "name": "iPhone 16 pro max",
+      "category": "phone",
+      "image": "/images/product_1.jpg",
+      "new_price": 134900,
+      "old_price": 144900,
+      "quantity": 1
+    },
+    {
+      "id": "2",
+      "name": "iphone 15 pro max",
+      "category": "phone",
+      "image": "/images/product_2.jpg",
+      "new_price": 99499,
+      "old_price": 159900,
+      "quantity": 1
+    },
+    {
+      "id": "3",
+      "name": "iphone 15 ",
+      "category": "phone",
+      "image": "/images/product_3.jpg",
+      "new_price": 64900,
+      "old_price": 69900,
+      "quantity": 1
+    },
+    {
+      "id": "4",
+      "name": "Sumsung Galaxy S23 Ultra",
+      "category": "phone",
+      "image": "/images/product_4.jpg",
+      "new_price": 79970,
+      "old_price": 149999,
+      "quantity": 1
+    },
+    {
+      "id": "5",
+      "name": "Sumsung Galaxy s24 Ultra",
+      "category": "phone",
+      "image": "/images/product_5.jpg",
+      "new_price": 83990,
+      "old_price": 134999,
+      "quantity": 1
+    },
+    {
+      "id": "6",
+      "name": "Sumsung Galaxy s23",
+      "category": "phone",
+      "image": "/images/product_6.jpg",
+      "new_price": 44999,
+      "old_price": 89999,
+      "quantity": 1
+    },
+    {
+      "id": "7",
+      "name": "cmf by nothing ",
+      "category": "phone",
+      "image": "/images/product_7.jpg",
+      "new_price": 15999,
+      "old_price": 19999,
+      "quantity": 1
+    },
+    {
+      "id": "8",
+      "name": "Nothing 2a ",
+      "category": "phone",
+      "image": "/images/product_8.jpg",
+      "new_price": 23999,
+      "old_price": 25999,
+      "quantity": 1
+    },
+    {
+      "id": "9",
+      "name": "Nothing 3a ",
+      "category": "phone",
+      "image": "/images/product_9.jpg",
+      "new_price": 24999,
+      "old_price": 27999,
+      "quantity": 1
+    },
+    {
+      "id": "10",
+      "name": "vivo s1 pro",
+      "category": "phone",
+      "image": "/images/product_10.jpg",
+      "new_price": 20990,
+      "old_price": 25990,
+      "quantity": 1
+    },
+    {
+      "id": "11",
+      "name": "mac os laptop",
+      "category": "laptop",
+      "image": "/images/product_11.jpg",
+      "new_price": 74990,
+      "old_price": 85900,
+      "quantity": 1
+    },
+    {
+      "id": "12",
+      "name": "mac os laptop",
+      "category": "laptop",
+      "image": "/images/product_12.jpg",
+      "new_price": 74990,
+      "old_price": 85900,
+      "quantity": 1
+    },
+    {
+      "id": "13",
+      "name": "mac os laptop",
+      "category": "laptop",
+      "image": "/images/product_13.jpg",
+      "new_price": 74990,
+      "old_price": 85900,
+      "quantity": 1
+    },
+    {
+      "id": "14",
+      "name": "victus laptop",
+      "category": "laptop",
+      "image": "/images/product_14.jpg",
+      "new_price": 59500,
+      "old_price": 76354,
+      "quantity": 1
+    },
+    {
+      "id": "15",
+      "name": "TUF gaming laptop",
+      "category": "laptop",
+      "image": "/images/product_15.jpg",
+      "new_price": 49466,
+      "old_price": 74990,
+      "quantity": 1
+    },
+    {
+      "id": "16",
+      "name": "TUF gaming laptop",
+      "category": "laptop",
+      "image": "/images/product_16.jpg",
+      "new_price": 49466,
+      "old_price": 74990,
+      "quantity": 1
+    },
+    {
+      "id": "17",
+      "name": "Dell gaming laptop",
+      "category": "laptop",
+      "image": "/images/product_17.jpg",
+      "new_price": 69990,
+      "old_price": 109790,
+      "quantity": 1
+    },
+    {
+      "id": "18",
+      "name": "Dell intel i9 laptop",
+      "category": "laptop",
+      "image": "/images/product_18.jpg",
+      "new_price": 109977,
+      "old_price": 197449,
+      "quantity": 1
+    },
+    {
+      "id": "19",
+      "name": "asus laptop",
+      "category": "laptop",
+      "image": "/images/product_19.jpg",
+      "new_price": 35990,
+      "old_price": 50990,
+      "quantity": 1
+    },
+    {
+      "id": "20",
+      "name": "asus laptop",
+      "category": "laptop",
+      "image": "/images/product_20.jpg",
+      "new_price": 35990,
+      "old_price": 50990,
+      "quantity": 1
+    }
+  ],
+  "new_arrival": [
+    {
+      "id": "1",
+      "name": "iPhone 16 pro max",
+      "category": "phone",
+      "image": "/images/product_1.jpg",
+      "new_price": 134900,
+      "old_price": 144900,
+      "quantity": 1
+    },
+    {
+      "id": "2",
+      "name": "iphone 15 pro max",
+      "category": "phone",
+      "image": "/images/product_2.jpg",
+      "new_price": 99499,
+      "old_price": 159900,
+      "quantity": 1
+    },
+    {
+      "id": "11",
+      "name": "mac os laptop",
+      "category": "laptop",
+      "image": "/images/product_11.jpg",
+      "new_price": 74990,
+      "old_price": 85900,
+      "quantity": 1
+    },
+    {
+      "id": "15",
+      "name": "TUF gaming laptop",
+      "category": "laptop",
+      "image": "/images/product_15.jpg",
+      "new_price": 49466,
+      "old_price": 74990,
+      "quantity": 1
+    }
+  ],
+  "offer_sales": [
+    {
+      "id": "3",
+      "name": "iphone 15 ",
+      "category": "phone",
+      "image": "/images/product_3.jpg",
+      "new_price": 64900,
+      "old_price": 69900,
+      "quantity": 1
+    },
+    {
+      "id": "6",
+      "name": "Sumsung Galaxy s23",
+      "category": "phone",
+      "image": "/images/product_6.jpg",
+      "new_price": 44999,
+      "old_price": 89999,
+      "quantity": 1
+    },
+    {
+      "id": "7",
+      "name": "cmf by nothing ",
+      "category": "phone",
+      "image": "/images/product_7.jpg",
+      "new_price": 15999,
+      "old_price": 19999,
+      "quantity": 1
+    },
+    {
+      "id": "10",
+      "name": "vivo s1 pro",
+      "category": "phone",
+      "image": "/images/product_10.jpg",
+      "new_price": 20990,
+      "old_price": 25990,
+      "quantity": 1
+    },
+    {
+      "id": "14",
+      "name": "victus laptop",
+      "category": "laptop",
+      "image": "/images/product_14.jpg",
+      "new_price": 59500,
+      "old_price": 76354,
+      "quantity": 1
+    },
+    {
+      "id": "18",
+      "name": "Dell intel i9 laptop",
+      "category": "laptop",
+      "image": "/images/product_18.jpg",
+      "new_price": 109977,
+      "old_price": 197449,
+      "quantity": 1
+    },
+    {
+      "id": "19",
+      "name": "asus laptop",
+      "category": "laptop",
+      "image": "/images/product_19.jpg",
+      "new_price": 35990,
+      "old_price": 50990,
+      "quantity": 1
+    },
+    {
+      "id": "20",
+      "name": "asus laptop",
+      "category": "laptop",
+      "image": "/images/product_20.jpg",
+      "new_price": 35990,
+      "old_price": 50990,
+      "quantity": 1
+    }
+  ]
+}

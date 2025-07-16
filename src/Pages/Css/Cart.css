@@ -1,0 +1,35 @@
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 30px;
+}
+
+.cart-left {
+  flex: 2;
+  min-width: 60%;
+}
+
+.cart-right {
+  flex: 1;
+  min-width: 30%;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  height: fit-content;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cart-empty {
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #666;
+}
+.checkout{
+    background: rgb(74, 155, 7);
+    color: white;
+    border-radius: 8px;
+    width: 90px;
+    height: 33px;
+}

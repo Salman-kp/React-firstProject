@@ -1,0 +1,68 @@
+.item {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05); /* light transparent white */
+  backdrop-filter: blur(8px); /* blur behind */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.item:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.item img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: transparent; /* make sure image container is transparent */
+}
+
+.item p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 10px 0 6px;
+}
+
+.item-prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.item-new-price {
+  font-size: 1.1rem;
+  color: #2e8b57;
+  font-weight: bold;
+}
+
+.item-old-price {
+  font-size: 0.95rem;
+  color: gray;
+  text-decoration: line-through;
+}
+
+/* Wishlist Heart Icon */
+.wishlist-icon {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 18px;
+  z-index: 2;
+  transition: transform 0.2s ease;
+}
+
+.wishlist-icon:hover {
+  transform: scale(1.2);
+}
