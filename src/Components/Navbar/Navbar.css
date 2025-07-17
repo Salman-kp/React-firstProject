@@ -3,40 +3,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  background: linear-gradient(180deg, #76b1e0, #2fcfcf);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 14px 24px;
+  background: linear-gradient(180deg, #5ca9e9, #3ed2cc);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 /* Logo Section */
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 5px;
-
+  gap: 8px;
 }
 
 .nav-logo img {
-  height: 40px;
+  height: 42px;
   width: auto;
 }
 
 .nav-logo p {
-  font-size: 20px;
-  font-weight: bold;
-  color: #0e0e0e;
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
 }
 
 /* Navigation Menu */
 .nav-menu {
   display: flex;
-  gap: 22px;
+  gap: 20px;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .nav-menu li a {
@@ -44,65 +43,57 @@
   color: #ffffff;
   font-weight: 500;
   font-size: 16px;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.nav-menu li a.active {
-  font-weight: bold;
-  color: #083d77;
-}
-
+.nav-menu li a.active,
 .nav-menu li a:hover {
-  color: #083d77;
+  color: #0a1d35;
+  font-weight: 600;
 }
 
-/* Icons Section */
+/* Icon Container */
 .nav-icons {
   display: flex;
-  gap: 12px;
-  font-size: 18px;
   align-items: center;
+  gap: 16px;
+  font-size: 18px;
 }
 
-.nav-icons a {
-  color: #ffffff;
-  transition: color 0.3s ease;
+.nav-icon {
   position: relative;
 }
 
-.nav-icons a.active svg {
-  color: #222;
+.nav-icon a {
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
-.nav-icons a:hover {
-  color: #000;
+.nav-icon a.active svg,
+.nav-icon a:hover {
+  color: #0a1d35;
 }
 
-/* Badge for cart, wishlist, orders */
+/* Badge */
 .icon-badge {
   position: absolute;
   top: -6px;
   right: -10px;
-  background-color: rgb(233, 3, 3);
+  background-color: red;
   color: white;
   font-size: 11px;
-  padding: 1px 5px;
+  font-weight: 600;
+  padding: 2px 6px;
   border-radius: 50%;
-  font-weight: bold;
   line-height: 1;
 }
 
-/* Ensure container for badge is relative */
-.nav-icons-cart,
-.nav-icons-wishlist {
-  position: relative;
-}
-
-/* Login/Logout Button */
+/* Login Button */
 .nav-login-btn .login-btn {
-  padding: 6px 12px;
+  padding: 6px 14px;
   font-size: 14px;
-  background-color: #2f3842;
+  background-color: #0a1d35;
   color: white;
   border: none;
   border-radius: 6px;
@@ -111,5 +102,5 @@
 }
 
 .nav-login-btn .login-btn:hover {
-  background-color: #1c2d4a;
+  background-color: #092039;
 }

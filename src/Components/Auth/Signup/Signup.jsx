@@ -26,8 +26,8 @@ const Signup = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();   // ✅ Prevents page reload
-    e.stopPropagation();  // ✅ Prevents bubbling
+    e.preventDefault();   
+    e.stopPropagation(); 
 
     if (!validate()) return;
 
@@ -43,7 +43,7 @@ const Signup = () => {
 
       await axios.post("http://localhost:3001/users", newUser);
       localStorage.setItem("currentUser", JSON.stringify(newUser));
-      setCurrentUser(newUser); // 🔁 Will trigger redirect via useEffect
+      setCurrentUser(newUser);
     } catch (err) {
       console.error(err);
       alert("Server error");

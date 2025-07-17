@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import logo from "/images/logo.png";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import { FaBagShopping } from "react-icons/fa6";
+import logo from "/images/logo.png";
 import "./Navbar.css";
 import { ShopContext } from "../../Context/ShopContext";
 
@@ -38,50 +38,33 @@ function Navbar() {
       </div>
 
       <ul className="nav-menu">
-        <li>
-          <NavLink to="/" end>Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/laptop">Laptop</NavLink>
-        </li>
-        <li>
-          <NavLink to="/phone">Phone</NavLink>
-        </li>
+        <li><NavLink to="/" end>Home</NavLink></li>
+        <li><NavLink to="/laptop">Laptop</NavLink></li>
+        <li><NavLink to="/phone">Phone</NavLink></li>
       </ul>
 
       <div className="nav-icons">
-        <div className="nav-icons-wishlist">
-          <NavLink to="/wishlist">
+        <div className="nav-icon">
+          <NavLink to="/wishlist" aria-label="Wishlist">
             <FaHeart />
-            {wishlist.length > 0 && (
-              <span className="icon-badge">{wishlist.length}</span>
-            )}
+            {wishlist.length > 0 && <span className="icon-badge">{wishlist.length}</span>}
           </NavLink>
         </div>
-
-        <div className="nav-icons-cart">
-          <NavLink to="/order">
+        <div className="nav-icon">
+          <NavLink to="/order" aria-label="Orders">
             <FaBagShopping />
-            {orderProducts.length > 0 && (
-              <span className="icon-badge">{orderProducts.length}</span>
-            )}
+            {orderProducts.length > 0 && <span className="icon-badge">{orderProducts.length}</span>}
           </NavLink>
         </div>
-
-        <div className="nav-icons-cart">
-          <NavLink to="/cart">
+        <div className="nav-icon">
+          <NavLink to="/cart" aria-label="Cart">
             <FaShoppingCart />
-            {cart.length > 0 && (
-              <span className="icon-badge">{cart.length}</span>
-            )}
+            {cart.length > 0 && <span className="icon-badge">{cart.length}</span>}
           </NavLink>
         </div>
-
         <div className="nav-login-btn">
           {currentUser ? (
-            <button onClick={handleLogout} className="login-btn">
-              Logout
-            </button>
+            <button onClick={handleLogout} className="login-btn">Logout</button>
           ) : (
             <NavLink to="/login">
               <button className="login-btn">Login</button>

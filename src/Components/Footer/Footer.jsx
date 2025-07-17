@@ -3,7 +3,7 @@ import './Footer.css'
 function Footer() {
   return (
       <footer >
-       <h1> © 2025 MyStore. All rights reserved.</h1> 
+       <p> © 2025 MyStore. All rights reserved.</p> 
       </footer>
   )
 }

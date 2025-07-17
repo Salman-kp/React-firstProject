@@ -1,11 +1,4 @@
-// ✅ FINAL ShopContextProvider.jsx with Orders, Wishlist, Cart
-import React, {
-  useEffect,
-  useReducer,
-  useState,
-  useCallback,
-  useMemo,
-} from "react";
+import React, {useEffect,useReducer,useState,useCallback,useMemo} from "react";
 import axios from "axios";
 import CartReducer from "./CartReducer";
 
@@ -27,7 +20,7 @@ function ShopContextProvider({ children }) {
     axios
       .get("http://localhost:3001/all_products")
       .then((res) => setAllProduct(res.data))
-      .catch((err) => console.error("Failed to fetch products:", err));
+      .catch((err) => console.error("Fetch products failed:", err));
   }, []);
 
   useEffect(() => {
@@ -39,13 +32,13 @@ function ShopContextProvider({ children }) {
 
     const fetchUserData = async () => {
       try {
-        const res = await axios.get(
+        const { data } = await axios.get(
           `http://localhost:3001/users/${currentUser.id}`
         );
-        setWishlist(res.data.wishlist || []);
-        setOrderProducts(res.data.order_products || []);
+        setWishlist(data.wishlist || []);
+        setOrderProducts(data.order_products || []);
       } catch (err) {
-        console.error("Failed to fetch user data:", err);
+        console.error("Fetch user data failed:", err);
       }
     };
 
@@ -55,12 +48,10 @@ function ShopContextProvider({ children }) {
   const toggleWishlist = useCallback(
     async (product) => {
       if (!currentUser) return;
-
-      const isInWishlist = wishlist.some((item) => item.id === product.id);
-      const updated = isInWishlist
+      const exists = wishlist.some((item) => item.id === product.id);
+      const updated = exists
         ? wishlist.filter((item) => item.id !== product.id)
         : [...wishlist, product];
-
       setWishlist(updated);
       await axios.patch(`http://localhost:3001/users/${currentUser.id}`, {
         wishlist: updated,
@@ -82,26 +73,20 @@ function ShopContextProvider({ children }) {
     [wishlist, currentUser]
   );
 
-  const wishlistItems = useMemo(() => wishlist.map((p) => p.id), [wishlist]);
-
   const saveOrderToDB = useCallback(
     async (newItems) => {
       if (!currentUser || newItems.length === 0) return;
-
       try {
-        const res = await axios.get(
+        const { data } = await axios.get(
           `http://localhost:3001/users/${currentUser.id}`
         );
-        const existingOrders = res.data.order_products || [];
-        const updatedOrders = [...existingOrders, ...newItems];
-
+        const updatedOrders = [...(data.order_products || []), ...newItems];
         await axios.patch(`http://localhost:3001/users/${currentUser.id}`, {
           order_products: updatedOrders,
         });
-
         setOrderProducts(updatedOrders);
       } catch (err) {
-        console.error("Failed to save order:", err);
+        console.error("Save order failed:", err);
       }
     },
     [currentUser]
@@ -110,6 +95,8 @@ function ShopContextProvider({ children }) {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
+
+  const wishlistItems = useMemo(() => wishlist.map((p) => p.id), [wishlist]);
 
   const contextValue = useMemo(
     () => ({
@@ -122,17 +109,28 @@ function ShopContextProvider({ children }) {
       toggleWishlist,
       removeFromWishlist,
       orderProducts,
-      saveOrderToDB,
       setOrderProducts,
+      saveOrderToDB,
       currentUser,
       setCurrentUser,
-      
     }),
-    [all_product, cart, wishlist, wishlistItems, orderProducts, currentUser]
+    [
+      all_product,
+      cart,
+      wishlist,
+      wishlistItems,
+      orderProducts,
+      currentUser,
+      toggleWishlist,
+      removeFromWishlist,
+      saveOrderToDB,
+    ]
   );
 
   return (
-    <ShopContext.Provider value={contextValue}>{children}</ShopContext.Provider>
+    <ShopContext.Provider value={contextValue}>
+      {children}
+    </ShopContext.Provider>
   );
 }
 

@@ -1,40 +1,38 @@
-import React, { useContext } from "react";
-import "./Items.css";
+import React, { useContext, memo } from "react";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import { ShopContext } from "../../Context/ShopContext";
+import "./Items.css";
 
-const Item = (props) => {
+const Item = memo(({ id, name, image, new_price, old_price }) => {
   const { toggleWishlist, wishlistItems } = useContext(ShopContext);
-  const isInWishlist = wishlistItems?.includes(props.id);
+  const isInWishlist = wishlistItems?.includes(id);
 
-  if (!props.id || !props.name || !props.image) return null;
+  if (!id || !name || !image) return null;
+
+  const handleWishlistClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleWishlist({ id, name, image, new_price, old_price });
+  };
 
   return (
     <div className="item">
-      <div
-        className="wishlist-icon"
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          toggleWishlist(props);
-        }}
-      >
-        <FaHeart color={isInWishlist ? "red" : "black"} />
+      <div className="wishlist-icon" onClick={handleWishlistClick}>
+        <FaHeart color={isInWishlist ? "red" : "#444"} />
+        
       </div>
 
-      <Link to={`/product/${props.id}`}>
-        <img onClick={() => window.scrollTo(0, 0)}
-        src={props.image}alt={props.name}/>
+      <Link to={`/product/${id}`} onClick={() => window.scrollTo(0, 0)}>
+        <img src={image} alt={name} />
+        <p>{name}</p>
+        <div className="item-prices">
+          <span className="item-new-price">₹{new_price}</span>
+          <span className="item-old-price">₹{old_price}</span>
+        </div>
       </Link>
-      
-      <p>{props.name}</p>
-      <div className="item-prices">
-        <span className="item-new-price">₹{props.new_price}</span>
-        <span className="item-old-price">₹{props.old_price}</span>
-      </div>
     </div>
   );
-};
+});
 
 export default Item;

@@ -4,7 +4,110 @@
       "id": "1",
       "username": "salmankp",
       "email": "salmankp7592@gmail.com",
-      "password": "salmankp7592"
+      "password": "sal7592mankp",
+      "wishlist": [],
+      "order_products": [
+        {
+          "id": "1",
+          "name": "iPhone 16 pro max",
+          "category": "phone",
+          "image": "/images/product_1.jpg",
+          "new_price": 134900,
+          "old_price": 144900,
+          "quantity": 1
+        },
+        {
+          "id": "14",
+          "name": "victus laptop",
+          "category": "laptop",
+          "image": "/images/product_14.jpg",
+          "new_price": 59500,
+          "old_price": 76354,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "username": "123",
+      "email": "123@gmail.com",
+      "password": "abc123",
+      "order_products": [
+        {
+          "id": "11",
+          "name": "mac os laptop",
+          "category": "laptop",
+          "image": "/images/product_11.jpg",
+          "new_price": 74990,
+          "old_price": 85900,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "username": "shamil",
+      "email": "shamil@gmail.com",
+      "password": "sha12mil",
+      "wishlist": [
+        {
+          "id": "11",
+          "name": "mac os laptop",
+          "image": "/images/product_11.jpg",
+          "new_price": 74990,
+          "old_price": 85900
+        },
+        {
+          "id": "2",
+          "name": "iphone 15 pro max",
+          "image": "/images/product_2.jpg",
+          "new_price": 99499,
+          "old_price": 159900
+        },
+        {
+          "id": "1",
+          "name": "iPhone 16 pro max",
+          "image": "/images/product_1.jpg",
+          "new_price": 134900,
+          "old_price": 144900
+        },
+        {
+          "id": "15",
+          "name": "TUF gaming laptop",
+          "image": "/images/product_15.jpg",
+          "new_price": 49466,
+          "old_price": 74990
+        }
+      ],
+      "order_products": [
+        {
+          "id": "7",
+          "name": "cmf by nothing ",
+          "category": "phone",
+          "image": "/images/product_7.jpg",
+          "new_price": 15999,
+          "old_price": 19999,
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "iphone 15 ",
+          "category": "phone",
+          "image": "/images/product_3.jpg",
+          "new_price": 64900,
+          "old_price": 69900,
+          "quantity": 1
+        },
+        {
+          "id": "7",
+          "name": "cmf by nothing ",
+          "category": "phone",
+          "image": "/images/product_7.jpg",
+          "new_price": 15999,
+          "old_price": 19999,
+          "quantity": 1
+        }
+      ]
     }
   ],
   "all_products": [

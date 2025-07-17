@@ -1,25 +1,23 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../Context/ShopContext";
 import CartProduct from "../Components/CartProduct/CartProduct";
-import "./Css/Cart.css";
 import { totalItems, totalPrice } from "../Context/CartReducer";
 import { useNavigate } from "react-router-dom";
+import "./Css/Cart.css";
 
 function Cart() {
-  const { cart, saveOrderToDB} = useContext(ShopContext);
+  const { cart } = useContext(ShopContext);
   const navigate = useNavigate();
-
   const amount = totalPrice(cart);
 
   const handleCheckout = () => {
     if (cart.length === 0) return;
-    saveOrderToDB(cart);
-    navigate("/payment", { state: { totalAmount: amount } }); // ✅ Pass totalAmount
+    navigate("/payment", { state: { totalAmount: amount } });
   };
 
   return (
     <div className="cart-container">
-      <div className="cart-left">
+      <div className={`cart-left ${cart.length === 0 ? "empty" : ""}`}>
         {cart.length > 0 ? (
           cart.map((product) => (
             <CartProduct key={product.id} product={product} />
@@ -28,14 +26,15 @@ function Cart() {
           <p className="cart-empty">Your cart is empty.</p>
         )}
       </div>
-
-      <div className="cart-right">
-        <h3>Total Items: {totalItems(cart)}</h3>
-        <h3>Total Pay: ₹{amount}</h3>
-        <button className="checkout" onClick={handleCheckout}>
-          Checkout
-        </button>
-      </div>
+      {cart.length > 0 && (
+        <div className="cart-right">
+          <h3>Total Items: {totalItems(cart)}</h3>
+          <h3>Total Pay: ₹{amount}</h3>
+          <button className="checkout" onClick={handleCheckout}>
+            Checkout
+          </button>
+        </div>
+      )}
     </div>
   );
 }

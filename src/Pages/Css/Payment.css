@@ -31,11 +31,7 @@
 .gohome{
     width: 150px;
     height: 30px;
-    background-color: rgb(0, 190, 253);
+    background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 10px;
-}
-.gohome:hover{
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
 }
